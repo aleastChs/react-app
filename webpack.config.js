@@ -1,22 +1,34 @@
-var config = {
-    entry: './main.js',
-    output: {
-        path: '/',
-        filename: 'index.js'
-    },
-    devServer: {
-        inline: true,
-        port: 8080
-    },
-    module: {
-        loaders: [{
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            loader: 'bable-loader',
-            query: {
-                prestes: ['es2015', 'react']
-            }
-        }]
-    }
-}
-module.exports = config;
+const path = require('path');
+const webpack = require('webpack');
+
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js',
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    historyApiFallback: true
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
+  module: {
+    rules : [
+      {
+        test: /\.jsx?$/,
+        include: [
+          path.resolve(__dirname, "src")
+        ],
+        exclude: [
+          path.resolve(__dirname, "node_modules")
+        ],
+        loader: 'babel-loader',
+        options: {
+            presets: ['es2015', 'react']
+        }
+      }
+    ]
+  }
+};
