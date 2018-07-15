@@ -5,6 +5,7 @@ class Dashboard extends Component {
     render() {
         return (
             <Navbar items={this.props.navItems} />
+
         );
     }
 }
