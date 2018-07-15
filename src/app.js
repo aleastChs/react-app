@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './header.js';
-import TableRow from './TableRow.jsx';
+import TableRow from './tableRow.js';
 
 class App extends Component {
     constructor() {
