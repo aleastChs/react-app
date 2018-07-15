@@ -1,10 +1,11 @@
 import React from 'react';
 
+/**/
 class Header extends React.Component {
     render() {
         return (
             <div>
-                <h1>Header</h1>
+                <h1>{this.props.text}</h1>
             </div>
         );
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './Header.jsx';
+import Header from './header.js';
 import TableRow from './TableRow.jsx';
 
 class App extends Component {
@@ -29,7 +29,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Header/>
+                <Header text='Hello World'/>
                 <table>
                     <tbody>
                         {this.state.data.map((person, i) => <TableRow key = {i} data = {person} />)}
