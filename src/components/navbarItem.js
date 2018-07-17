@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class NavbarItem extends Component {
     render() {
         return (
-            <span>{this.props.data.name}</span>
+            <span id='navbarItem'>{this.props.data.name}</span>
         );
     }
 }

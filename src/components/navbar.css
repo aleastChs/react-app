@@ -1,10 +1,10 @@
-span: {
-    color: black;
-    background: #FAFAFA;
+span#navbarItem {
     margin: 1em;
-    font-size: 2em;
 }
 
-div: {
+div#navbar {
+    background: #FAFAFA;
+    color: black;
+    font-size: 2em;
     text-align: center;
 }
