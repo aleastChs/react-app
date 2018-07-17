@@ -20,15 +20,27 @@ module.exports = {
         test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, "src")
-        ],
+        ]
+      },
+      {
         exclude: [
           path.resolve(__dirname, "node_modules")
-        ],
+        ]
+      },
+      {
         loader: 'babel-loader',
         options: {
             presets: ['es2015', 'react']
         }
       }
+      /*,{
+        test: /\.css$/,
+        use:
+        [
+            'style-loader',
+            'css-loader'
+        ]
+      }*/
     ]
   }
 };
